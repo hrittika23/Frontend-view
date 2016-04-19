@@ -1,0 +1,502 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <div class= "row">
+        <div class="col-md-3" style="background-color : Orange;">
+          Flight
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-11">
+          <div class="panel panel-default ">
+            <div class="panel-body" style="background-color : grey;">
+              <div class="col-md-2">
+                Search Criteria
+              </div>
+              <div class="col-md-7">
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                    Delhi(DEL)- Dubai(DXB)>> Dubai(DXB)-Delhi(DEL)
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <form role="form">
+                  <div class="form-group">
+                    <select class="form-control" id="sel1">
+                      <option>Economy Class</option>
+                      <option> Business Class</option>
+                    </select>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1">
+        <imd src="filter.png">
+        <!-- Trigger the modal with a button -->
+        <a href="#" data-toggle="modal" data-target="#myModal5">Filter</a>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal5" role="dialog">
+          <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                Filter
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-3">
+                    Timing
+                  </div>
+                </div>
+                <div class="form">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label> <input type="checkbox" value="">Morning </label>
+                    </div>
+                    <div class="col-md-3">
+                      <label> <input type="checkbox" value="">Afternoon </label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label> <input type="checkbox" value="">Evening </label>
+                    </div>
+                    <div class="col-md-3">
+                      <label> <input type="checkbox" value="">Night </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-3">
+                    Range
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-md-5">
+                    Preferred Airlines
+                  </div>
+                </div>
+                <form role="form">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="checkbox">
+                        <label> <input type="checkbox" value=""> Etihad Airways </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="checkbox">
+                        <label> <input type="checkbox" value="">Air India</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="checkbox">
+                        <label> <input type="checkbox" value=""> Jet Airways</label>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="row">
+                <div class="col-md-3">
+                  Stops
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-md-4">
+                  <form role="form">
+                    <label class="checkbox-inline">
+                    <input type="checkbox" value="">0 </label>
+                    <label class="checkbox-inline">
+                    <input type="checkbox" value="">1 </label>
+                    <label class="checkbox-inline">
+                    <input type="checkbox" value="">2 </label>
+                  </form>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-md-3">
+                  Fare Type
+                </div>
+              </div>
+              <div class="row">
+                <form role="form">
+                  <div class="col-md-3">
+                    <label class="checkbox-inline">
+                    <input type="checkbox" value="">Refundable </label>
+                  </div>
+                  <div class="col-md-3">
+                    <label class="checkbox-inline">
+                    <input type="checkbox" value=""> Non Refundable </label>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Apply</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="col-md-1">
+      <!-- Trigger the modal with a button -->
+      <a href="#" data-toggle="modal" data-target="#myModal6">Sort</a>
+      <!-- Modal -->
+      <div class="modal fade" id="myModal6" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              Sort
+            </div>
+            <div class="modal-body">
+              <form role="form">
+                <div class="row">
+                  <div class="col-md-2">
+                    <div class="checkbox">
+                      <label> <input type="checkbox" value="">Departure Time </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-2">
+                    <div class="checkbox">
+                      <label> <input type="checkbox" value="">Duartion</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-2">
+                    <div class="checkbox">
+                      <label> <input type="checkbox" value="">Price </label>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Apply</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6" style="text-align : center;">
+          <div class="col-md-2">
+            Departure
+          </div>
+          <div class="col-md-2">
+            Arrival
+          </div>
+          <div class="col-md-2">
+            Duration
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="col-md-2">
+            Departure
+          </div>
+          <div class="col-md-2">
+            Arrival
+          </div>
+          <div class="col-md-2">
+            Duration
+          </div>
+          <div class="col-md-2">
+            Pricing
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="row">
+      <div class="container">
+        <div class="col-md-12">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div class="col-md-4">
+                <div class="col-md-4">
+                  <div class="dept">
+                    DEL
+                  </div>
+                  <br>
+                  <div class="depttime">
+                    18 May, 2:55am
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="arriv">
+                    CTU
+                  </div>
+                  <br>
+                  <div class="arrivtime">
+                    18 May, 10:25pm
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class-"duration">
+                    17h 0m
+                  </div>
+                  <br>
+                  <div class="stop">
+                    1 Stop(s)
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="col-md-4">
+                  <div class="dept">
+                    DEL
+                  </div>
+                  <br>
+                  <div class="depttime">
+                    18 May, 2:55am
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="arriv">
+                    CTU
+                  </div>
+                  <br>
+                  <div class="arrivtime">
+                    18 May, 10:25pm
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class-"duration">
+                    17h 0m
+                  </div>
+                  <br>
+                  <div class="stop">
+                    1 Stop(s)
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="col-md-7">
+                  rs. 35,5021
+                </div>
+                <div class="col-md-4">
+                  <div class="buttons">
+                    <div class="add-btn">
+                      <button type="button" class="btn btn-info">Add To Cart</button>
+                    </div>
+                    <br>
+                    <div class="view">
+                      <!-- Trigger the modal with a button -->
+                      <a href="#" data-toggle="modal" data-target="#myModal7"> View Details</a>
+                      <!-- Modal -->
+                      <div class="modal fade" id="myModal7" role="dialog">
+                        <div class="modal-dialog">
+                          <!-- Modal content-->
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              Flight Details
+                            </div>
+                            <div class="modal-body">
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-md-4">
+                                    Delhi to Dubai
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-4">
+                                    Departure
+                                  </div>
+                                  <div class="col-md-4">
+                                    Arrival
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-4">
+                                    Delhi
+                                  </div>
+                                  <div class="col-md-4">
+                                    Dubai
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-4">
+                                    20 May, 16  9:10 AM
+                                  </div>
+                                  <div class="col-md-4">
+                                    20 May, 16 1:20 PM
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-4">
+                                      Indira Gandhi Airport
+                                    </div>
+                                    <div class="col-md-4">
+                                      Dubai
+                                    </div>
+                                  </div>
+                                  <hr>
+                                  <div class="row">
+                                    <div class="col-md-4">
+                                      Dubai to Delhi
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-4">
+                                      Departure
+                                    </div>
+                                    <div class="col-md-4">
+                                      Arrival
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-4">
+                                      Dubai
+                                    </div>
+                                    <div class="col-md-4">
+                                      Delhi
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-4">
+                                      26 May, 16  9:30 AM
+                                    </div>
+                                    <div class="col-md-4">
+                                      26 May, 16 1:20 PM
+                                    </div>
+                                    <div class="row">
+                                      <div class="col-md-4">
+                                        Dubai
+                                      </div>
+                                      <div class="col-md-4">
+                                        Indira Gandi International Airport
+                                      </div>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col-md-4">
+                                        Fare Breakup
+                                      </div>
+                                      <div class="col-md-4">
+                                        Fare Type
+                                      </div>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col-md-4">
+                                        Base Fare
+                                        <hr>
+                                      </div>
+                                      <div class="col-md-4">
+                                        Refundable
+                                      </div>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col-md-3">
+                                        1 Adult (1 x 5,300)
+                                      </div>
+                                      <div class="col-md-1">
+                                        rs. 5300
+                                      </div>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col-md-4">
+                                        Taxes
+                                      </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                      <div class="col-md-4">
+                                        1 Adult (11,777)
+                                      </div>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col-md-3">
+                                        Grand Total
+                                      </div>
+                                      <div class="col-md-1">
+                                        rs. 17,077
+                                      </div>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col-md-4">
+                                        Other Information
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-->
+                        <!-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="col-lg-8">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <div class="col-lg-3">
+                  <div class="Item">
+                    Item Cost : Rs. 207771
+                  </div>
+                  <div class="Service">
+                    Service Charge : Rs. 831
+                  </div>
+                  <div class="Discount">
+                    Discount : Rs 904
+                  </div>
+                  <div class="Tax">
+                    Tax : Rs 784
+                  </div>
+                  <div class ="Grand Total">
+                    Grand Total : rs 21482
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  </body>
